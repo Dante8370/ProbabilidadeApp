@@ -69,7 +69,7 @@ export default function ArranjoComposto({navigation}: any) {
     return (
         <C>
             <Head>
-                <TextLogo>Arranjos Compostos</TextLogo>
+                <TextLogo>    Arranjos {"\n"} Compostos</TextLogo>
                 <ModalButtonContainer>
                 <ModalButton onPress={() => setModalVisible(true)}>
                 <Image source={require('../../ImageApp/information.png')} style={{ width: 20, height: 20, padding: 15

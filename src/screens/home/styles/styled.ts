@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 export const Container = styled.View`
     flex: 1;
@@ -7,148 +8,149 @@ export const Container = styled.View`
 `;
 
 export const AreaButtons = styled.View`
-    gap: 20px;
+    gap: ${hp('2%')}px;
     width: 100%;
-    height: 100vh;
+    height: ${hp('80%')}px;
     align-items: center;
     justify-content: center;
-    margin-top: 0px;
+    margin-top: ${hp('5%')}px;
+    margin-bottom: ${hp('20%')}px;
 `;
 
 export const AreaQuestion = styled.View`
-    top: -10px;
+    top: 0;
     width: 100%;
-    height: 80px;
+    height: ${hp('10%')}px;
     background-color: #00695C;
     align-items: center;
-    margin-top: 10%;  
+    margin-top: ${hp('5%')}px;  
 `;
+
 export const BotaoVoltar = styled.TouchableOpacity`
     background-color: green;
-    height: 35px;
-    width: 75px;
+    height: ${hp('5%')}px;
+    width: ${wp('20%')}px;
     border-radius: 15px;
-    margin: 10px;
+    margin: ${hp('1%')}px;
     align-items: center;
     justify-content: center;
 `;
-0
 
 export const TextQuestion = styled.Text`
-    margin-top: 15px;
+    margin-top: ${hp('2%')}px;
     margin-bottom: 0px;
-    font-size: 20px;
+    font-size: ${wp('5%')}px;
     font-family: Helvetica;
     color: white;
 `;
 
 export const DisplayForm = styled.View`
     height: 100%;
-    width: 60%;
+    width: ${wp('60%')}px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 `;
 
 export const TextA = styled.Text`
-    font-size: 34px;
+    font-size: ${wp('7%')}px;
     font-weight: bold;
     color: black;
-    top: -7px;
+    top: -${hp('1%')}px;
 `;
 
 export const Textnp = styled.Text`
-    font-size: 20px;
+    font-size: ${wp('5%')}px;
     font-weight: bold;
     color: black;
-    top: 7px;
+    top: ${hp('1%')}px;
 `;
 
 export const TextIgual = styled.Text`
-    font-size: 20px;
+    font-size: ${wp('5%')}px;
     font-weight: bold;
     color: black;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: ${wp('2%')}px;
+    margin-right: ${wp('2%')}px;
 `;
 
 export const Form2 = styled.View`
-    
+    align-items: center;
 `;
 
+export const FormAR = styled.View`
+    flex-direction: row;
+`;
+
+
 export const Textn = styled.Text`
-    font-size: 25px;
+    font-size: ${wp('6%')}px;
     font-weight: bold;
     color: black;
-    margin-left: 30px;
+`;
+
+export const Textp = styled.Text`
+    font-size: ${wp('4%')}px;
+    font-weight: bold;
+    color: black;
+    top: ${wp('-1%')}px;
 `;
 
 export const Traco = styled.View`
-    height: 3px;
-    width: 80px;
+    height: ${hp('0.3%')}px;
+    width: ${wp('20%')}px;
     background-color: black;
 `;
 
 export const TextNp = styled.Text`
-    font-size: 20px;
+    font-size: ${wp('5%')}px;
     font-weight: bold;
     color: black;
-    margin-left: 10px;
+    margin-left: ${wp('2%')}px;
 `;
-
 
 export const TextBtn = styled.Text`
-    font-size: 18px;
+    font-size: ${wp('4.5%')}px;
     color: black;
     font-weight: bold;
 `;
-
-
-
-
 
 export const BotaoArranjo = styled.TouchableOpacity`
     background-color: white;
-    height: 15%;
-    width: 90%;
+    height: ${hp('15%')}px;
+    width: ${wp('90%')}px;
     border-radius: 25px;
     border: 2px;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    padding-left: 5px;
 `;
-
 
 export const BotaoArranjoComposto = styled.TouchableOpacity`
     background-color: white;
-    height: 15%;
-    width: 90%;
+    height: ${hp('15%')}px;
+    width: ${wp('90%')}px;
     border-radius: 25px;
     border: 2px;
     align-items: center;
-    padding-right: 30px;
-    flex-direction: row;
+    padding-right: ${wp('7%')}px;
 `;
 
 export const BotaoCombinacao = styled.TouchableOpacity`
     background-color: white;
-    height: 15%;
-    width: 90%;
+    height: ${hp('15%')}px;
+    width: ${wp('90%')}px;
     border-radius: 25px;
     border: 2px;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
 `;
 
 export const BotaoCombinacaoComposta = styled.TouchableOpacity`
     background-color: white;
-    height: 15%;
-    width: 90%;
+    height: ${hp('15%')}px;
+    width: ${wp('90%')}px;
     border-radius: 25px;
     border: 2px;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
 `;

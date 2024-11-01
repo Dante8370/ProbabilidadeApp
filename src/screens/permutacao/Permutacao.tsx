@@ -4,6 +4,7 @@ import { Container, Head, ModalButton, TextLogo, DisplayForm, TextA, BoxNQE, Tex
         TextQE, DisplayCalc, Div, TextResult, Tecle, TextBn, BoxBtn, Buttons, TextButton, C } from './styles';
 import * as Font from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
+
 import NavBar from '../../componentes/NavBar/NavBar';
 
 export default function PermutacaoSimples({navigation}: any) {
@@ -16,6 +17,7 @@ export default function PermutacaoSimples({navigation}: any) {
     const [array, setArray] = useState<any[]>([]);
     const [isTypingN, setIsTypingN] = useState(true);  // Alterna entre n e p
     const [fontsLoaded, setFontsLoaded] = useState(false);
+
 
     useEffect(() => {
         async function loadFonts() {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
-import { Container, DisplayForm, TextA, Textnp, TextIgual, Form2, Traco, Textn, TextNp, AreaButtons, TextBtn, AreaQuestion, TextQuestion, BotaoArranjo, BotaoArranjoComposto, BotaoCombinacao, BotaoCombinacaoComposta } from '../home/styles/styled';
+import { StatusBar, ScrollView } from 'react-native';
+import { Container, DisplayForm, TextA, Textnp, TextIgual, Form2, FormAR, Traco, Textn, Textp, TextNp, AreaButtons, TextBtn, AreaQuestion, TextQuestion, BotaoArranjo, BotaoArranjoComposto, BotaoCombinacao, BotaoCombinacaoComposta } from '../home/styles/styled';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { RootStackParamList } from '../../types/navigation';
 import BottonArranjo from '../../componentes/Bottons/BtnArranjo/BottonArranjo';
@@ -18,7 +18,7 @@ export default function CalculadorasScreen() {
 
   return (
     <Container>
-      <StatusBar barStyle="light-content" backgroundColor="#004D40" translucent />
+      <StatusBar barStyle="light-content" backgroundColor="#00695C" translucent />
       
       <AreaQuestion>
         <TextQuestion>
@@ -30,9 +30,11 @@ export default function CalculadorasScreen() {
         
           
             
-
+      <ScrollView contentContainerStyle={{ alignItems: 'center', paddingVertical: 20 }}>
       <AreaButtons>
+      
         {/* Arranjo */}
+        <TextBtn>Arranjo</TextBtn>
         <BotaoArranjo onPress={() => navigation.navigate('Arranjo')}>
           <DisplayForm>
             <TextA>A</TextA>
@@ -43,13 +45,11 @@ export default function CalculadorasScreen() {
               <Traco></Traco>
               <TextNp>(n - p)!</TextNp>
             </Form2>
-          <TextBtn>Arranjo</TextBtn>
           </DisplayForm>
-
-          
         </BotaoArranjo>
 
         {/* Combinação */}
+        <TextBtn>Combinação</TextBtn>
         <BotaoCombinacao onPress={() => navigation.navigate('Combinacao')}>
           <DisplayForm>
             <TextA>C</TextA>
@@ -61,41 +61,25 @@ export default function CalculadorasScreen() {
               <TextNp>p! (n - p)!</TextNp>
             </Form2>
           </DisplayForm>
-          <TextBtn>Combinação</TextBtn>
         </BotaoCombinacao>
 
 
         {/* Arranjo Composto */}
+        <TextBtn>Arranjo Com Repetição</TextBtn>
         <BotaoArranjoComposto onPress={() => { navigation.navigate('ArranjoComposto'); }}>
           <DisplayForm style = {{}}>
-            <TextA>AC</TextA>
-            <Textnp></Textnp>
+            <TextA>Ar</TextA>
+            <Textnp>n p</Textnp>
             <TextIgual>=</TextIgual>
-            <Form2>
-              <Textn>n!</Textn>
-              <Traco></Traco>
-              <TextNp></TextNp>
-            </Form2>
+            <FormAR>
+              <Textn>n</Textn>
+              <Textp>p</Textp>
+            </FormAR>
           </DisplayForm>
-          <TextBtn>Arranjo Composto</TextBtn>
         </BotaoArranjoComposto>
 
-        {/* Combinação Composta */}
-        <BotaoCombinacaoComposta onPress={() => navigation.navigate('CombinacaoComposta')}>
-          <DisplayForm>
-            <TextA>CC</TextA>
-            <Textnp></Textnp>
-            <TextIgual>=</TextIgual>
-            <Form2>
-              <Textn>n!</Textn>
-              <Traco></Traco>
-              <TextNp></TextNp>
-            </Form2>
-          <TextBtn>Combinação Composta</TextBtn>
-          </DisplayForm>
-        </BotaoCombinacaoComposta>
-
         {/* Permutação */}
+        <TextBtn>Permutação com Repetição</TextBtn>
         <BotaoCombinacaoComposta onPress={() => navigation.navigate('Permutacao')}>
           <DisplayForm>
             <TextA>P</TextA>
@@ -105,9 +89,10 @@ export default function CalculadorasScreen() {
               <Textn>n!</Textn>
             </Form2>
           </DisplayForm>
-          <TextBtn>Permutação</TextBtn>
         </BotaoCombinacaoComposta>
+        
       </AreaButtons>
+      </ScrollView>
 
       <NavBar />
     </Container>
