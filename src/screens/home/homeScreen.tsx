@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar, ScrollView, Button, TouchableOpacity, Text } from 'react-native';
 import { Container, DisplayForm, TextA, Textnp, TextIgual, Form2, FormAR, Traco,
-   Textn, Textp, TextNp, AreaButtons, TextBtn, AreaQuestion, TextQuestion, BotaoArranjo,
+   Textn, Textp, TextNp, AreaButtons, TextBtn, AreaQuestion, TextQuestion, PermutacaoSimples, BotaoArranjo,
     BotaoArranjoComposto, BotaoCombinacao, BotaoCombinacaoComposta, TextQE, BoxNQE } from '../home/styles/styled';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { RootStackParamList } from '../../types/navigation';
@@ -31,6 +31,21 @@ export default function CalculadorasScreen() {
       <AreaButtons>
 
          {/* Permutação */}
+
+        <TextBtn>Permutação simples</TextBtn>
+        <PermutacaoSimples onPress={() => navigation.navigate('PermutacaoSimples')}>
+              <DisplayForm>
+                  <TextA>P</TextA>
+                  <BoxNQE>
+                      <Textnp>n</Textnp>
+                  </BoxNQE>
+                  <TextIgual>=</TextIgual>
+                  <Form2>
+                      <Textn>n!</Textn>
+                  </Form2>
+              </DisplayForm>
+          </PermutacaoSimples>
+
          <TextBtn>Permutação com Repetição</TextBtn>
         <BotaoCombinacaoComposta onPress={() => navigation.navigate('Permutacao')}>
         <DisplayForm>

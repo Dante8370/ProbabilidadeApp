@@ -1,6 +1,7 @@
 export type RootStackParamList = {
   Home: undefined;
   Permutacao: undefined;
+  PermutacaoSimples: undefined;
   Calculadoras: undefined;
   Information: any;
   Combinacao: undefined;

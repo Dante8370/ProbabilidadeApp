@@ -7,7 +7,7 @@ import * as SplashScreen from 'expo-splash-screen';
 
 import NavBar from '../../componentes/NavBar/NavBar';
 
-export default function PermutacaoSimples({navigation}: any) {
+export default function PermutacaoComRepeticao({navigation}: any) {
     const [n, setN] = useState('');  // Estado para armazenar n
     const [p, setP] = useState('');  // Estado para armazenar p
     const [resultado, setResultado] = useState('');

@@ -13,7 +13,7 @@ export const AreaButtons = styled.View`
     height: ${hp('80%')}px;
     align-items: center;
     justify-content: center;
-    margin-top: ${hp('5%')}px;
+    margin-top: ${hp('15%')}px;
     margin-bottom: ${hp('20%')}px;
 `;
 
@@ -53,6 +53,7 @@ export const TextQE = styled.Text`
     font-weight: bold;
     color: black;
     margin-left: 5px;
+    
 `;
 
 export const DisplayForm = styled.View`
@@ -67,7 +68,6 @@ export const TextA = styled.Text`
     font-size: ${wp('7%')}px;
     font-weight: bold;
     color: black;
-    top: -${hp('1%')}px;
 `;
 
 export const Textnp = styled.Text`
@@ -95,7 +95,7 @@ export const FormAR = styled.View`
 
 
 export const Textn = styled.Text`
-    font-size: ${wp('6%')}px;
+    font-size: ${wp('4%')}px;
     font-weight: bold;
     color: black;
 `;
@@ -157,6 +157,16 @@ export const BotaoCombinacao = styled.TouchableOpacity`
 `;
 
 export const BotaoCombinacaoComposta = styled.TouchableOpacity`
+    background-color: white;
+    height: ${hp('15%')}px;
+    width: ${wp('90%')}px;
+    border-radius: 25px;
+    border: 2px;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const PermutacaoSimples = styled.TouchableOpacity`
     background-color: white;
     height: ${hp('15%')}px;
     width: ${wp('90%')}px;
