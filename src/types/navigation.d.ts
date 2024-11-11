@@ -7,4 +7,5 @@ export type RootStackParamList = {
   Arranjo: undefined;
   CombinacaoComposta: undefined;
   ArranjoComposto: undefined;
+  Player: undefined;
   };

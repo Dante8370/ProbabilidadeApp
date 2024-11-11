@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from "react";
-import { View, Text, TextInput } from "react-native";
+import { View, Text, TextInput, Alert } from "react-native";
 import { Container, Head, ModalButton, TextLogo, DisplayForm, TextA, BoxNQE, TextIgual, Form2, Traco, Textn, 
         TextQE, DisplayCalc, Div, TextResult, Tecle, TextBn, BoxBtn, Buttons, TextButton, C } from './styles';
 import * as Font from 'expo-font';
@@ -72,10 +72,9 @@ export default function PermutacaoSimples({navigation}: any) {
 
     const handleCalculate = () => {
         if (!n || array.length === 0) {
-            setResultado('Por favor, insira um valor para n e os elementos repetidos.');
+            Alert.alert('Por favor, insira um valor para n e os elementos repetidos.');
             return;
         }
-    
         try {
             // Calcula o fatorial de n
             const numerador = factorial(parseInt(n));
@@ -139,7 +138,7 @@ export default function PermutacaoSimples({navigation}: any) {
 
             <Tecle>
                 <Div>
-                    <TextBn>Quantos elementos repetidos?</TextBn>
+                    <TextBn>Por favor, insira um valor para n e os elementos repetidos. {'\n'}</TextBn>
                     <TextInput
                         style={{
                             backgroundColor: 'gray',
@@ -156,7 +155,7 @@ export default function PermutacaoSimples({navigation}: any) {
 
                     <BoxBtn>
                         <ModalButton onPress={() => addValue()}>
-                            <Text>Enter</Text>
+                            <TextButton>Enter</TextButton>
                         </ModalButton>
                     </BoxBtn>
 

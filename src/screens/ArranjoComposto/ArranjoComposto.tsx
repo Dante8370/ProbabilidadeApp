@@ -41,7 +41,7 @@ export default function ArranjoComposto({navigation}: any) {
                 const pNumber = parseFloat(p);
                 
                 if (!isNaN(nNumber) && !isNaN(pNumber)) {
-                    const result = arranjoSimples(nNumber, pNumber);
+                    const result = arranjoComRepeticao(nNumber, pNumber);
                     setResultado(result.toString());
                 } else {
                     setResultado('Error: Número inválido');
@@ -52,11 +52,11 @@ export default function ArranjoComposto({navigation}: any) {
         }
     };
 
-    const arranjoSimples = (n: number, p: number): number => {
+    const arranjoComRepeticao = (n: number, p: number): number => {
         if (n < p){
             Alert.alert('O n não pode ser menor que p!')
         }
-        return factorial(n) / factorial(n - p);
+        return n**p;
     };
 
     const factorial = (num: number): number => {
@@ -86,9 +86,8 @@ export default function ArranjoComposto({navigation}: any) {
                 <TextIgual>=</TextIgual>
 
                 <Form2>
-                    <Textn>{n || 'n'}!</Textn>
-                    <Traco></Traco>
-                    <TextNp>{`(${n || 'n'} - ${p || 'p'})!`}</TextNp>
+                    <Textn>{n || 'n'}</Textn>
+                    <TextNp>{` ${p || 'p'} `}</TextNp>
                 </Form2>
             </DisplayForm>
 

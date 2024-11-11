@@ -9,6 +9,7 @@ import Combinacao from './src/screens/Combinação/CombinacaoScreen';
 import PermutacaoSimples from './src/screens/permutacao/Permutacao';
 import ArranjoComposto from './src/screens/ArranjoComposto/ArranjoComposto';
 import Information from './src/screens/Info/Information';
+import Player from './src/componentes/Videos/Player';
 
 export default function App() {
   const Stack = createStackNavigator()
@@ -21,6 +22,7 @@ export default function App() {
       <Stack.Screen name="Permutacao" component={PermutacaoSimples} options={{ headerShown: false }}/>
       <Stack.Screen name="Combinacao" component={Combinacao} options={{ headerShown: false }}/>
       <Stack.Screen name="Information" component={Information} options={{ headerShown: false }}/>
+      <Stack.Screen name="Player" component={Player} options={{ headerShown: false }}/>
     </Stack.Navigator>
   </NavigationContainer>
   );

@@ -27,12 +27,14 @@ export const TextLogo = styled.Text`
     font-size: ${wp('8%')}px;
     color: white;
     font-weight: bold;
-    font-family: Helvetica;
     right: ${wp('-5%')}px;
     margin-top: ${wp('8%')}px;
 `;
 
-export const ModalContainer = styled.Modal``;
+export const ModalContainer = styled.Modal`
+    height: 100%;
+    width: 100%;
+`;
 
 export const ModalButtonContainer = styled.View`
     left: ${wp('25%')}px;
@@ -44,21 +46,52 @@ export const ModalButton = styled.TouchableOpacity`
 `;
 
 export const ModalContent = styled.View`
-    background-color: #0CABA8;
-    height: ${hp('60%')}px;
+    background-color: white;
+    height: ${hp('100%')}px;
+    width: ${wp('100%')}px;
+    justify-content: center;
+`;
+
+export const BoxElements = styled.View`
+    background-color: white;
+    height: ${hp('100%')}px;
     width: ${wp('90%')}px;
-    border-radius: 30px;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+`;
+
+export const TextTitle = styled.Text`
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px;
+`;
+
+export const BoxTextBody = styled.View`
+
+`;
+
+export const TextBody = styled.Text`
+    font-size: 20px;
+    text-align: center;
+`;
+
+export const TextView = styled.View`
+
 `;
 
 export const CloseModal = styled.TouchableOpacity`
-    bottom: ${hp('-80%')}px;
-    background-color: #008F8C;
+    margin-right: ${wp('-20%')}px;
     height: ${hp('5%')}px;
-    width: ${wp('20%')}px;
+    width: ${wp('25%')}px;
     border-radius: 15px;
     align-items: center;
     justify-content: center;
+`;
+
+export const TextBtn = styled.Text`
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
 `;
 
 export const DisplayForm = styled.View`

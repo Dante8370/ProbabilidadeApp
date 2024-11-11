@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, Image, Alert } from "react-native";
-import { Container, Head, ModalContainer, ModalButtonContainer, ModalContent, ModalButton, CloseModal, TextLogo, DisplayForm, TextA, Textnp, TextIgual, Form2, Traco, Textn, TextNp, DisplayCalc, Div, TextResult, Tecle, Buttons, TextButton, C } from './styled';
+import { View, Text, TouchableOpacity, StyleSheet, Image, Alert, ScrollView } from "react-native";
+import { Container, Head, ModalContainer, ModalButtonContainer, TextTitle, BoxTextBody, TextBody, TextBtn, ModalContent, BoxElements, ModalButton,
+    CloseModal, TextLogo, DisplayForm, TextA, Textnp, TextIgual, Form2, Traco, Textn,
+    TextNp, DisplayCalc, Div, TextResult, Tecle, Buttons, TextButton, C } from './styled';
 import Modal from 'react-native-modal';
 import NavBar from "../../componentes/NavBar/NavBar";
+import Player from "../../componentes/Videos/Player";
 
 import './img/information.png'
 
@@ -40,8 +43,8 @@ export default function Arranjo({navigation}: any) {
                 const pNumber = parseFloat(p);
                 if (!isNaN(nNumber) && !isNaN(pNumber)) {
                     const result = arranjoSimples(nNumber, pNumber);
-                    setResultado(result.toString());
-                } else {
+                    setResultado(result.toString().slice(0, 6));
+                } else {   
                     setResultado('Error: Número inválido');
                 }
             } catch (error) {
@@ -80,6 +83,7 @@ export default function Arranjo({navigation}: any) {
                 </ModalButton>
             </ModalButtonContainer>
             </Head>
+            
 
             <DisplayForm>
                 <TextA>A</TextA>
@@ -115,13 +119,26 @@ export default function Arranjo({navigation}: any) {
                 <TextResult> O resultado é: {n >= p ? `${resultado}` : 'erro'}</TextResult>
             </DisplayCalc>
 
-            <Modal isVisible={modalVisible} onBackdropPress={() => setModalVisible(false)} style={{ alignItems: 'center'}}>
-                <ModalContent>
-                    <Text>Seu conteúdo modal aqui</Text>
-                    <CloseModal onPress={() => setModalVisible(false)}>
-                    <Text>Fechar</Text>
-                    </CloseModal>
-                </ModalContent>
+            
+
+            <Modal isVisible={modalVisible} onBackdropPress={() => setModalVisible(false)}>
+                <ScrollView>
+                    <ModalContent>
+                        <BoxElements>
+                            <TextTitle>Arranjo simples</TextTitle>
+                            <CloseModal onPress={() => setModalVisible(false)}>
+                            <TextBtn>X</TextBtn>
+                            </CloseModal>
+                        </BoxElements>
+
+                        <BoxTextBody>
+                            <TextBody>
+                                Teste
+                            </TextBody>
+                        </BoxTextBody>
+
+                    </ModalContent>
+                </ScrollView>
             </Modal>
             <NavBar />
 
@@ -129,8 +146,3 @@ export default function Arranjo({navigation}: any) {
         </C>
     )
 }
-
-
-/*
-Pegar a quantidade de elementos que serao repetidos, adicionar na formula e realizar a operacao
-*/ 

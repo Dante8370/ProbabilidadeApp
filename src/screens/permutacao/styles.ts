@@ -44,7 +44,7 @@ export const ModalButton = styled.TouchableOpacity`
     width: 100px;
     align-items: center;
     justify-content: center;
-    background-color: #4F4F4F;
+    background-color: black;
     border-radius: 10px;
 `;
 
@@ -144,7 +144,7 @@ export const DisplayCalc = styled.View`
     justify-content: center;
 `;
 
-export const Div =styled.View`
+export const Div = styled.View`
     height: 100%;
     width: 100%;
     flex-direction: column;
@@ -167,8 +167,9 @@ export const Tecle = styled.View`
     justify-content: center;
 `;
 export const TextBn = styled.Text`
-    font-size: 30px;
+    font-size: 20px;
     color: black;
+    font-weight: bold;
 `;
 
 export const BoxBtn = styled.View`
@@ -181,7 +182,7 @@ export const Buttons = styled.TouchableOpacity`
     width: 100px;
     align-items: center;
     justify-content: center;
-    background-color: #4F4F4F;
+    background-color: black;
     margin-top: 15px;
     border-radius: 10px;
 `;

@@ -1,14 +1,15 @@
 import React from 'react';
-import { StatusBar, ScrollView } from 'react-native';
-import { Container, DisplayForm, TextA, Textnp, TextIgual, Form2, FormAR, Traco, Textn, Textp, TextNp, AreaButtons, TextBtn, AreaQuestion, TextQuestion, BotaoArranjo, BotaoArranjoComposto, BotaoCombinacao, BotaoCombinacaoComposta } from '../home/styles/styled';
+import { StatusBar, ScrollView, Button, TouchableOpacity, Text } from 'react-native';
+import { Container, DisplayForm, TextA, Textnp, TextIgual, Form2, FormAR, Traco,
+   Textn, Textp, TextNp, AreaButtons, TextBtn, AreaQuestion, TextQuestion, BotaoArranjo,
+    BotaoArranjoComposto, BotaoCombinacao, BotaoCombinacaoComposta, TextQE, BoxNQE } from '../home/styles/styled';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { RootStackParamList } from '../../types/navigation';
-import BottonArranjo from '../../componentes/Bottons/BtnArranjo/BottonArranjo';
 
 import '../calculadora/img/matematica.png';
-
-
 import NavBar from '../../componentes/NavBar/NavBar';
+import Player from '../../componentes/Videos/Player';
+
 
 // Defina o tipo para a propriedade de navegação do NavBar
 type NavBarNavigationProp = NavigationProp<RootStackParamList>;
@@ -25,13 +26,27 @@ export default function CalculadorasScreen() {
           Qual calculadora você gostaria de utilizar?
         </TextQuestion>
       </AreaQuestion>
-
-    
-        
-          
-            
+   
       <ScrollView contentContainerStyle={{ alignItems: 'center', paddingVertical: 20 }}>
       <AreaButtons>
+
+         {/* Permutação */}
+         <TextBtn>Permutação com Repetição</TextBtn>
+        <BotaoCombinacaoComposta onPress={() => navigation.navigate('Permutacao')}>
+        <DisplayForm>
+                <TextA>P</TextA>
+                <BoxNQE>
+                    <TextQE>a! x b! x c!...</TextQE>
+                    <Textn>n!</Textn>
+                </BoxNQE>
+                <TextIgual>=</TextIgual>
+                <Form2>
+                    <Textn>n!</Textn>
+                    <Traco></Traco>
+                    <TextQE>a! x b! x c!</TextQE>
+                </Form2>
+            </DisplayForm>
+        </BotaoCombinacaoComposta>
       
         {/* Arranjo */}
         <TextBtn>Arranjo</TextBtn>
@@ -48,8 +63,23 @@ export default function CalculadorasScreen() {
           </DisplayForm>
         </BotaoArranjo>
 
+        
+        {/* Arranjo Composto */}
+        <TextBtn>Arranjo Com Repetição</TextBtn>
+        <BotaoArranjoComposto onPress={() => { navigation.navigate('ArranjoComposto'); }}>
+          <DisplayForm style = {{}}>
+            <TextA>AR</TextA>
+            <Textnp>n p</Textnp>
+            <TextIgual>=</TextIgual>
+            <FormAR>
+              <Textn>n</Textn>
+              <Textp>p</Textp>
+            </FormAR>
+          </DisplayForm>
+        </BotaoArranjoComposto>
+
         {/* Combinação */}
-        <TextBtn>Combinação</TextBtn>
+        <TextBtn>Combinação Simples</TextBtn>
         <BotaoCombinacao onPress={() => navigation.navigate('Combinacao')}>
           <DisplayForm>
             <TextA>C</TextA>
@@ -62,35 +92,6 @@ export default function CalculadorasScreen() {
             </Form2>
           </DisplayForm>
         </BotaoCombinacao>
-
-
-        {/* Arranjo Composto */}
-        <TextBtn>Arranjo Com Repetição</TextBtn>
-        <BotaoArranjoComposto onPress={() => { navigation.navigate('ArranjoComposto'); }}>
-          <DisplayForm style = {{}}>
-            <TextA>Ar</TextA>
-            <Textnp>n p</Textnp>
-            <TextIgual>=</TextIgual>
-            <FormAR>
-              <Textn>n</Textn>
-              <Textp>p</Textp>
-            </FormAR>
-          </DisplayForm>
-        </BotaoArranjoComposto>
-
-        {/* Permutação */}
-        <TextBtn>Permutação com Repetição</TextBtn>
-        <BotaoCombinacaoComposta onPress={() => navigation.navigate('Permutacao')}>
-          <DisplayForm>
-            <TextA>P</TextA>
-            <Textnp>n</Textnp>
-            <TextIgual>=</TextIgual>
-            <Form2>
-              <Textn>n!</Textn>
-            </Form2>
-          </DisplayForm>
-        </BotaoCombinacaoComposta>
-        
       </AreaButtons>
       </ScrollView>
 

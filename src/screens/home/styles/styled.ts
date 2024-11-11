@@ -44,6 +44,17 @@ export const TextQuestion = styled.Text`
     color: white;
 `;
 
+export const BoxNQE = styled.View`
+
+`;
+
+export const TextQE = styled.Text`
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-left: 5px;
+`;
+
 export const DisplayForm = styled.View`
     height: 100%;
     width: ${wp('60%')}px;

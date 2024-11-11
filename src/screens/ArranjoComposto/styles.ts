@@ -93,7 +93,9 @@ export const TextIgual = styled.Text`
     margin-right: ${wp('2%')}px;
 `;
 
-export const Form2 = styled.View``;
+export const Form2 = styled.View`
+    flex-direction: row;
+`;
 
 export const Textn = styled.Text`
     font-size: ${wp('6%')}px;
@@ -109,7 +111,7 @@ export const Traco = styled.View`
 `;
 
 export const TextNp = styled.Text`
-    font-size: ${wp('6%')}px;
+    font-size: ${wp('4%')}px;
     font-weight: bold;
     color: black;
     margin-left: ${wp('2%')}px;
